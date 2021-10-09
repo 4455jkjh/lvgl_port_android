@@ -8,6 +8,7 @@
 #include "lvgl/lvgl.h"
 #include "lv_demos/lv_demo.h"
 #include "lv_clock/lv_clock.h"
+#include "lv_tick_custom.h"
 
 struct saved_state {
     int32_t x;
@@ -171,7 +172,6 @@ void native_touch(JNIEnv *env, jclass cls, jint x, jint y, jboolean is_touched) 
 
 }
 
-#include "lvgl/time.h"
 
 uint32_t currentTimeInMilliseconds() {
     static uint64_t start_ms = 0;
